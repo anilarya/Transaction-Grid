@@ -23,7 +23,9 @@ angular.module('payUApp')
                 allowUnsort: false
             },
             selectable: "single, row", // rows wise selection feture
-            filterable : true,   // Enabling filteing column wise
+            filterable: {
+                            mode: "row"
+                        },   // Enabling filteing column wise
             scrollable:true, //  enabling scolling length of column header
             columnMenu: true,  // enabling column menu
             groupable: true,  // Enabling grouping of data based on selection of particular column
@@ -33,7 +35,7 @@ angular.module('payUApp')
                       {field : "merchatId", title :"Merchat Id",filterable:false ,sortable: false},
                       {field : "customerEmail", title :"Customer Email",filterable:false,sortable: false},
                       {field : "amount", title :"Amount",filterable:false},
-                      {field : "paymentStatus", title :"Payment Status",filterable:true,sortable: false},
+                      {field : "paymentStatus", title :"Payment Status",filterable: {cell:{ operator: "contains"}},sortable: false},
 
             
             ] 
