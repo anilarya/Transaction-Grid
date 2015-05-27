@@ -13,7 +13,7 @@ angular.module('payUApp')
     // ...
     return { 
         fetchTransactionData: function () {  
-                var url = '/data/location.json';  //Your own Rest APIs 
+                var url = '/data/transaction.json';  //Your own Rest APIs 
                 
                 var promise = $http({
                     url :url,
